@@ -68,7 +68,7 @@ type Cart @key(fields: "owner { id }") {
   subtotal: Float! @requires(fields: "items { price }")
 }
 
-type Order @key(fields: "id", resolvable: false) {
+type Order @key(fields: "id", resolvable: false) @tag(name: "removeOrders") {
   id: ID!
 }
 
